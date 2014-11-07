@@ -20,7 +20,12 @@
     // Override point for customization after application launch.
     
     // 初始化 SDK，传入 App Key，deviceToken 暂时为空，等待获取权限。
-    [RCIMClient init:@"25wehl3uw6jlw" deviceToken:nil];
+
+#define APPKEY @"e0x9wycfx7flq"
+    
+    [RCIMClient init:APPKEY deviceToken:nil];
+    Class clazz = NSClassFromString(@"CustomMessage");
+    [RCIMClient registerMessageType:clazz];
     
     return YES;
 }

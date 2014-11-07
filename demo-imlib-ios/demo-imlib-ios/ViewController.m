@@ -13,6 +13,7 @@
 #import "RCVoiceMessage.h"
 #import "RCIMClient.h"
 #import "RCStatusDefine.h"
+#import "CustomMessage.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface ViewController ()<RCReceiveMessageDelegate,RCConnectDelegate,RCSendMessageDelegate>
@@ -20,6 +21,7 @@
 @property (nonatomic,strong) NSURL *recordedFile ;
 @property (nonatomic,strong) AVAudioPlayer *player;
 @property (nonatomic,strong) AVAudioRecorder *recorder;
+@property (nonatomic) NSString *userId;
 
 @end
 
@@ -29,7 +31,8 @@
     [super viewDidLoad];
     
     //连接融云服务器，用自己注册融云API调试下获取的Token
-    [RCIMClient connect:@"70YUydFc9mgnBoD1dZRq6jyXG0r4pvA1sUEQoiaxbkhsBIaUWcuu8BVdNyNuufguLj+fsZp04YzqrxN4oG4GKA==" delegate:self];
+#define TOKEN @"59H0lzpuYMlFJS4bgox0oqZMo/KVDHrEYcpc/b7q1zuKgeSI3SOHP46XMpl3cLW/OHgbni7BAGUbr27DPwtGTg=="
+    [RCIMClient connect:TOKEN delegate:self];
     
     //设置接收消息的回调
     [[RCIMClient sharedRCIMClient] setReceiveMessageDelegate:self object:nil];
@@ -51,7 +54,7 @@
     RCImageMessage *rcImageMessage = [RCImageMessage messageWithImage:image];
     
     [[RCIMClient sharedRCIMClient] sendMessage:ConversationType_PRIVATE
-                                      targetId:[NSString stringWithFormat:@"%d",1101]
+                                      targetId:self.userId
                                        content:rcImageMessage
                                       delegate:self object:nil];
 }
@@ -62,7 +65,7 @@
     RCTextMessage *rcImageMessage = [RCTextMessage messageWithContent:@"This is a test message!"];
     
     [[RCIMClient sharedRCIMClient] sendMessage:ConversationType_PRIVATE
-                                      targetId:[NSString stringWithFormat:@"%d",1101]
+                                      targetId:self.userId
                                        content:rcImageMessage
                                       delegate:self object:nil];
 }
@@ -84,7 +87,7 @@
     RCVoiceMessage *message = [RCVoiceMessage messageWithAudio:currentRecordData duration:_recorder.currentTime];
     
     [[RCIMClient sharedRCIMClient] sendMessage:ConversationType_PRIVATE
-                                      targetId:@"1011"
+                                      targetId:self.userId
                                        content:message
                                       delegate:self object:nil];
     
@@ -93,15 +96,27 @@
 
 }
 
+//发送自定义消息
+- (IBAction)sentCustomMessage:(id)sender {
+    CustomMessage *message = [CustomMessage customMessageTextContent:@"test" intContent:100];
+
+    [[RCIMClient sharedRCIMClient] sendMessage:ConversationType_PRIVATE
+                                      targetId:self.userId
+                                       content:message
+                                      delegate:self object:nil];
+    
+}
+
 #pragma mark - 图片消息
 -(void)sendImageMessage:(UIImage*)image{
     
     RCImageMessage *rcImageMessage = [RCImageMessage messageWithImage:image];
     
     [[RCIMClient sharedRCIMClient] sendMessage:ConversationType_PRIVATE
-                                        targetId:@"1011"
-                                                              content:rcImageMessage
-                                                             delegate:self object:nil];
+                                        targetId:self.userId
+     
+                                       content:rcImageMessage
+                                      delegate:self object:nil];
 
     
 }
@@ -114,13 +129,22 @@
         _player = [[AVAudioPlayer alloc] initWithContentsOfURL:_recordedFile error:nil];
         [_player play];
     }
+    
+    if ([message.content isKindOfClass:[CustomMessage class]]) {
+        CustomMessage *msg = (CustomMessage *) message.content;
+        NSLog(@"自定消息%@",msg.text);
+    }
     NSLog(@"消息接收成功 ! %@",message);
 }
 
 #pragma mark - RCConnectDelegate
 -(void)responseConnectSuccess:(NSString *)userId
 {
+    [[NSUserDefaults standardUserDefaults] setObject:userId forKey:@"DemoUserId"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    self.userId = userId;
     NSLog(@"连接成功！");
+    [RCIMClient registerMessageType:NSClassFromString(@"CustomMessage")];
 }
 
 -(void)responseConnectError:(RCConnectErrorCode)errorCode
@@ -142,5 +166,9 @@
     if (progress == 100) {
         NSLog(@"发送图片成功!");
     }
+}
+
+-(void)responseError:(int)errorCode messageId:(long)messageId object:(id)object {
+
 }
 @end
