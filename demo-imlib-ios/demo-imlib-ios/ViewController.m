@@ -13,7 +13,6 @@
 #import "RCVoiceMessage.h"
 #import "RCIMClient.h"
 #import "RCStatusDefine.h"
-#import "CustomMessage.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface ViewController ()<RCReceiveMessageDelegate,RCConnectDelegate,RCSendMessageDelegate>
@@ -99,12 +98,12 @@
 
 //发送自定义消息
 - (IBAction)sentCustomMessage:(id)sender {
-    CustomMessage *message = [CustomMessage customMessageTextContent:@"test" intContent:100];
-
-    [[RCIMClient sharedRCIMClient] sendMessage:ConversationType_PRIVATE
-                                      targetId:self.userId
-                                       content:message
-                                      delegate:self object:nil];
+//    GroupInvitationNotification *message = [GroupInvitationNotification customMessageTextContent:@"test" intContent:100];
+//
+//    [[RCIMClient sharedRCIMClient] sendMessage:ConversationType_PRIVATE
+//                                      targetId:self.userId
+//                                       content:message
+//                                      delegate:self object:nil];
     
 }
 
@@ -127,14 +126,11 @@
 -(void)responseOnReceived:(RCMessage *)message left:(int)nLeft object:(id)object
 {
     if ([message.content isKindOfClass:[RCVoiceMessage class]]) {
-        _player = [[AVAudioPlayer alloc] initWithContentsOfURL:_recordedFile error:nil];
+        RCVoiceMessage *msg = (RCVoiceMessage *) message.content;
+        _player = [[AVAudioPlayer alloc] initWithData:msg.wavAudioData error:NULL];
         [_player play];
     }
-    
-    if ([message.content isKindOfClass:[CustomMessage class]]) {
-        CustomMessage *msg = (CustomMessage *) message.content;
-        NSLog(@"自定消息%@",msg.textContent);
-    }
+
     NSLog(@"消息接收成功 ! %@",message);
 }
 
@@ -145,7 +141,6 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
     self.userId = userId;
     NSLog(@"连接成功！");
-    [RCIMClient registerMessageType:NSClassFromString(@"CustomMessage")];
 }
 
 -(void)responseConnectError:(RCConnectErrorCode)errorCode

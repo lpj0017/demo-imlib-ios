@@ -33,7 +33,6 @@
 		E4BF479D1A0B80B100C88FEA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4BF479C1A0B80B100C88FEA /* SystemConfiguration.framework */; };
 		E4BF479F1A0B80B800C88FEA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4BF479E1A0B80B800C88FEA /* UIKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		E4BF47A11A0B840200C88FEA /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = E4BF47A01A0B840200C88FEA /* test.png */; };
-		E4C331311A0CABC700E31B9A /* CustomMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C331301A0CABC700E31B9A /* CustomMessage.m */; };
 		E4C3313C1A0CB7E700E31B9A /* libiOS_IMLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C3313B1A0CB7E700E31B9A /* libiOS_IMLib.a */; };
 		E4C331401A0CCF4000E31B9A /* iOS_IMLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C3313F1A0CCF4000E31B9A /* iOS_IMLib.a */; };
 /* End PBXBuildFile section */
@@ -97,8 +96,6 @@
 		E4BF479C1A0B80B100C88FEA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		E4BF479E1A0B80B800C88FEA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E4BF47A01A0B840200C88FEA /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
-		E4C3312F1A0CABC700E31B9A /* CustomMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomMessage.h; sourceTree = "<group>"; };
-		E4C331301A0CABC700E31B9A /* CustomMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomMessage.m; sourceTree = "<group>"; };
 		E4C3313B1A0CB7E700E31B9A /* libiOS_IMLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libiOS_IMLib.a; path = "../../../../Library/Developer/Xcode/DerivedData/rcim-v1-dbccqophhzmosefoxdgiqyuedoam/Build/Products/Debug-iphoneos/libiOS_IMLib.a"; sourceTree = "<group>"; };
 		E4C3313F1A0CCF4000E31B9A /* iOS_IMLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = iOS_IMLib.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,8 +163,6 @@
 				E4BF475F1A0B404900C88FEA /* Utilities */,
 				E4BF473D1A0B403200C88FEA /* AppDelegate.h */,
 				E4BF473E1A0B403200C88FEA /* AppDelegate.m */,
-				E4C3312F1A0CABC700E31B9A /* CustomMessage.h */,
-				E4C331301A0CABC700E31B9A /* CustomMessage.m */,
 				E4BF47401A0B403200C88FEA /* ViewController.h */,
 				E4BF47411A0B403200C88FEA /* ViewController.m */,
 				E4BF47431A0B403200C88FEA /* Main.storyboard */,
@@ -383,7 +378,6 @@
 			files = (
 				E4BF47421A0B403200C88FEA /* ViewController.m in Sources */,
 				E4BF473F1A0B403200C88FEA /* AppDelegate.m in Sources */,
-				E4C331311A0CABC700E31B9A /* CustomMessage.m in Sources */,
 				E4BF473C1A0B403200C88FEA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

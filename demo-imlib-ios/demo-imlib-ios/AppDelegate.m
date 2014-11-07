@@ -24,8 +24,6 @@
 #define APPKEY @"c9kqb3rdk79pj"
     
     [RCIMClient init:APPKEY deviceToken:nil];
-    Class clazz = NSClassFromString(@"CustomMessage");
-    [RCIMClient registerMessageType:clazz];
     
     return YES;
 }
