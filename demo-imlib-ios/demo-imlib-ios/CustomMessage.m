@@ -13,7 +13,7 @@
 
 -(NSData *)encode
 {
-    NSDictionary* dataDict = @{@"textContent":_text,@"intContent":[NSNumber numberWithInteger:_intContent]};
+    NSDictionary* dataDict = @{@"textContent":_textContent,@"intContent":[NSNumber numberWithInteger:_intContent]};
     NSError *error = nil;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dataDict
                                                        options:kNilOptions
@@ -27,7 +27,7 @@
 -(void)decodeWithData:(NSData *)data {
     __autoreleasing NSError* error = nil;
     NSDictionary* jsonDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-    self.text = jsonDict[@"textContent"];
+    self.textContent = jsonDict[@"textContent"];
     self.intContent = [jsonDict[@"intContent"] integerValue];
 }
 
@@ -35,7 +35,7 @@
 {
     CustomMessage *message = [[CustomMessage alloc] init];
     message.intContent = intContent;
-    message.text = textContent;
+    message.textContent = textContent;
     return message;
     
 }

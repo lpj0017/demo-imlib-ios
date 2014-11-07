@@ -35,7 +35,7 @@
 		E4BF47A11A0B840200C88FEA /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = E4BF47A01A0B840200C88FEA /* test.png */; };
 		E4C331311A0CABC700E31B9A /* CustomMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C331301A0CABC700E31B9A /* CustomMessage.m */; };
 		E4C3313C1A0CB7E700E31B9A /* libiOS_IMLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C3313B1A0CB7E700E31B9A /* libiOS_IMLib.a */; };
-		E4C3313E1A0CC59100E31B9A /* iOS_IMLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C3313D1A0CC59100E31B9A /* iOS_IMLib.a */; };
+		E4C331401A0CCF4000E31B9A /* iOS_IMLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C3313F1A0CCF4000E31B9A /* iOS_IMLib.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,7 +100,7 @@
 		E4C3312F1A0CABC700E31B9A /* CustomMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomMessage.h; sourceTree = "<group>"; };
 		E4C331301A0CABC700E31B9A /* CustomMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomMessage.m; sourceTree = "<group>"; };
 		E4C3313B1A0CB7E700E31B9A /* libiOS_IMLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libiOS_IMLib.a; path = "../../../../Library/Developer/Xcode/DerivedData/rcim-v1-dbccqophhzmosefoxdgiqyuedoam/Build/Products/Debug-iphoneos/libiOS_IMLib.a"; sourceTree = "<group>"; };
-		E4C3313D1A0CC59100E31B9A /* iOS_IMLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = iOS_IMLib.a; sourceTree = "<group>"; };
+		E4C3313F1A0CCF4000E31B9A /* iOS_IMLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = iOS_IMLib.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +125,7 @@
 				E4BF47851A0B803C00C88FEA /* CoreTelephony.framework in Frameworks */,
 				E4BF47831A0B803400C88FEA /* CoreGraphics.framework in Frameworks */,
 				E4BF47811A0B802D00C88FEA /* CFNetwork.framework in Frameworks */,
-				E4C3313E1A0CC59100E31B9A /* iOS_IMLib.a in Frameworks */,
+				E4C331401A0CCF4000E31B9A /* iOS_IMLib.a in Frameworks */,
 				E4BF477F1A0B801500C88FEA /* AVFoundation.framework in Frameworks */,
 				E4BF477D1A0B801100C88FEA /* AudioToolbox.framework in Frameworks */,
 			);
@@ -216,7 +216,7 @@
 		E4BF47601A0B41F800C88FEA /* imlib */ = {
 			isa = PBXGroup;
 			children = (
-				E4C3313D1A0CC59100E31B9A /* iOS_IMLib.a */,
+				E4C3313F1A0CCF4000E31B9A /* iOS_IMLib.a */,
 				E4BF47611A0B41F800C88FEA /* Headers */,
 			);
 			path = imlib;

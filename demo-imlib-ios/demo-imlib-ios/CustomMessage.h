@@ -10,7 +10,7 @@
 
 @interface CustomMessage : RCMessageContent
 
-@property (nonatomic,copy) NSString *text;
+@property (nonatomic,copy) NSString *textContent;
 @property (nonatomic,assign) NSInteger intContent;
 
 +(instancetype) customMessageTextContent : (NSString *) textContent

@@ -21,7 +21,7 @@
     
     // 初始化 SDK，传入 App Key，deviceToken 暂时为空，等待获取权限。
 
-#define APPKEY @"e0x9wycfx7flq"
+#define APPKEY @"c9kqb3rdk79pj"
     
     [RCIMClient init:APPKEY deviceToken:nil];
     Class clazz = NSClassFromString(@"CustomMessage");

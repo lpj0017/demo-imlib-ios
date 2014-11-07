@@ -31,8 +31,9 @@
     [super viewDidLoad];
     
     //连接融云服务器，用自己注册融云API调试下获取的Token
-#define TOKEN @"59H0lzpuYMlFJS4bgox0oqZMo/KVDHrEYcpc/b7q1zuKgeSI3SOHP46XMpl3cLW/OHgbni7BAGUbr27DPwtGTg=="
-    [RCIMClient connect:TOKEN delegate:self];
+#define TOKEN1 @"XdW7qHkF9wvKQCKzYH3nDgYqCABAn5Kcb8fca4eQhGaaWjGCFu7YYIDYzu5h5C30NeC3UICWSuu2y7b5u85R1Q=="
+    
+    [RCIMClient connect:TOKEN1 delegate:self];
     
     //设置接收消息的回调
     [[RCIMClient sharedRCIMClient] setReceiveMessageDelegate:self object:nil];
@@ -132,7 +133,7 @@
     
     if ([message.content isKindOfClass:[CustomMessage class]]) {
         CustomMessage *msg = (CustomMessage *) message.content;
-        NSLog(@"自定消息%@",msg.text);
+        NSLog(@"自定消息%@",msg.textContent);
     }
     NSLog(@"消息接收成功 ! %@",message);
 }
