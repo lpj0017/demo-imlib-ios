@@ -13,6 +13,7 @@
 #import "RCVoiceMessage.h"
 #import "RCIMClient.h"
 #import "RCStatusDefine.h"
+#import "GroupInvitationNotification.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface ViewController ()<RCReceiveMessageDelegate,RCConnectDelegate,RCSendMessageDelegate>
@@ -98,12 +99,12 @@
 
 //发送自定义消息
 - (IBAction)sentCustomMessage:(id)sender {
-//    GroupInvitationNotification *message = [GroupInvitationNotification customMessageTextContent:@"test" intContent:100];
-//
-//    [[RCIMClient sharedRCIMClient] sendMessage:ConversationType_PRIVATE
-//                                      targetId:self.userId
-//                                       content:message
-//                                      delegate:self object:nil];
+    GroupInvitationNotification *message = [GroupInvitationNotification groupInvitationNotificationWith:@"1101" message:@"test"];
+    [RCIMClient registerMessageType:[GroupInvitationNotification class]];
+    [[RCIMClient sharedRCIMClient] sendMessage:ConversationType_PRIVATE
+                                      targetId:self.userId
+                                       content:message
+                                      delegate:self object:nil];
     
 }
 
@@ -129,6 +130,11 @@
         RCVoiceMessage *msg = (RCVoiceMessage *) message.content;
         _player = [[AVAudioPlayer alloc] initWithData:msg.wavAudioData error:NULL];
         [_player play];
+    }
+    
+    if ([message.content isKindOfClass:[GroupInvitationNotification class]]) {
+        GroupInvitationNotification *noti = (GroupInvitationNotification *) message.content;
+        NSLog(@"自定消息内容 %@ %@",noti.groupId,noti.message);
     }
 
     NSLog(@"消息接收成功 ! %@",message);

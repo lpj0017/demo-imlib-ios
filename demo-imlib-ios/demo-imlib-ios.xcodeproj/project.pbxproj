@@ -35,6 +35,7 @@
 		E4BF47A11A0B840200C88FEA /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = E4BF47A01A0B840200C88FEA /* test.png */; };
 		E4C3313C1A0CB7E700E31B9A /* libiOS_IMLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C3313B1A0CB7E700E31B9A /* libiOS_IMLib.a */; };
 		E4C331401A0CCF4000E31B9A /* iOS_IMLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C3313F1A0CCF4000E31B9A /* iOS_IMLib.a */; };
+		E4C331431A0CD65C00E31B9A /* GroupInvitationNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C331421A0CD65C00E31B9A /* GroupInvitationNotification.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,8 @@
 		E4BF47A01A0B840200C88FEA /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 		E4C3313B1A0CB7E700E31B9A /* libiOS_IMLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libiOS_IMLib.a; path = "../../../../Library/Developer/Xcode/DerivedData/rcim-v1-dbccqophhzmosefoxdgiqyuedoam/Build/Products/Debug-iphoneos/libiOS_IMLib.a"; sourceTree = "<group>"; };
 		E4C3313F1A0CCF4000E31B9A /* iOS_IMLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = iOS_IMLib.a; sourceTree = "<group>"; };
+		E4C331411A0CD65C00E31B9A /* GroupInvitationNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupInvitationNotification.h; sourceTree = "<group>"; };
+		E4C331421A0CD65C00E31B9A /* GroupInvitationNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupInvitationNotification.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +168,8 @@
 				E4BF473E1A0B403200C88FEA /* AppDelegate.m */,
 				E4BF47401A0B403200C88FEA /* ViewController.h */,
 				E4BF47411A0B403200C88FEA /* ViewController.m */,
+				E4C331411A0CD65C00E31B9A /* GroupInvitationNotification.h */,
+				E4C331421A0CD65C00E31B9A /* GroupInvitationNotification.m */,
 				E4BF47431A0B403200C88FEA /* Main.storyboard */,
 				E4BF47461A0B403200C88FEA /* Images.xcassets */,
 				E4BF47481A0B403200C88FEA /* LaunchScreen.xib */,
@@ -377,6 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4BF47421A0B403200C88FEA /* ViewController.m in Sources */,
+				E4C331431A0CD65C00E31B9A /* GroupInvitationNotification.m in Sources */,
 				E4BF473F1A0B403200C88FEA /* AppDelegate.m in Sources */,
 				E4BF473C1A0B403200C88FEA /* main.m in Sources */,
 			);
