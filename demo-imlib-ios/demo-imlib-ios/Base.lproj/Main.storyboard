@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AfM-mg-7Wu">
+                                <rect key="frame" x="202" y="82" width="77" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="77" id="rZR-Fn-ZRG"/>
+                                </constraints>
+                                <state key="normal" title="发送文本">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qrf-qY-bo5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AqI-O9-GvE">
+                                <rect key="frame" x="202" y="142" width="77" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="发送语音">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendAndPlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9zy-aZ-Xfv"/>
+                                    <action selector="sendAndPlay:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="dDs-ny-PiY"/>
+                                    <action selector="sendVoip:" destination="BYZ-38-t0r" eventType="touchDown" id="hMs-rY-svy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mc2-9h-yJo">
+                                <rect key="frame" x="321" y="82" width="77" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="发送图片">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lfp-Cd-N7N"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="按住不动录音，松开发送并播放录音" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72c-5r-axz">
+                                <rect key="frame" x="202" y="186" width="224" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="hHM-s9-e8S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dh2-X0-xPo">
+                                <rect key="frame" x="321" y="142" width="90" height="30"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="发送自定消息">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sentCustomMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yga-lS-4ho"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mc2-9h-yJo" firstAttribute="leading" secondItem="AfM-mg-7Wu" secondAttribute="trailing" constant="42" id="4Wb-xQ-mas"/>
+                            <constraint firstItem="72c-5r-axz" firstAttribute="centerX" secondItem="AqI-O9-GvE" secondAttribute="centerX" constant="73.5" id="7oh-0b-swW"/>
+                            <constraint firstItem="AfM-mg-7Wu" firstAttribute="baseline" secondItem="mc2-9h-yJo" secondAttribute="baseline" id="AoQ-T5-uzI"/>
+                            <constraint firstItem="AqI-O9-GvE" firstAttribute="leading" secondItem="AfM-mg-7Wu" secondAttribute="leading" id="CdO-SI-rrP"/>
+                            <constraint firstItem="AfM-mg-7Wu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="62" id="RL5-ma-4fQ"/>
+                            <constraint firstItem="dh2-X0-xPo" firstAttribute="top" secondItem="mc2-9h-yJo" secondAttribute="bottom" constant="30" id="SbC-p8-bbf"/>
+                            <constraint firstItem="72c-5r-axz" firstAttribute="leading" secondItem="AqI-O9-GvE" secondAttribute="leading" id="Tkd-T7-29a"/>
+                            <constraint firstItem="AqI-O9-GvE" firstAttribute="top" secondItem="AfM-mg-7Wu" secondAttribute="bottom" constant="30" id="bvg-gH-bdf"/>
+                            <constraint firstAttribute="centerX" secondItem="mc2-9h-yJo" secondAttribute="centerX" constant="-59.5" id="c6N-Hn-aZW"/>
+                            <constraint firstItem="dh2-X0-xPo" firstAttribute="leading" secondItem="mc2-9h-yJo" secondAttribute="leading" id="oYH-dr-QHt"/>
+                            <constraint firstAttribute="centerX" secondItem="AqI-O9-GvE" secondAttribute="centerX" constant="59.5" id="s5C-ha-zvt"/>
+                            <constraint firstAttribute="centerX" secondItem="AfM-mg-7Wu" secondAttribute="centerX" constant="59.5" id="tey-9t-Bh6"/>
+                            <constraint firstItem="72c-5r-axz" firstAttribute="top" secondItem="AqI-O9-GvE" secondAttribute="bottom" constant="14" id="vsu-Fn-xcf"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
