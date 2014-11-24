@@ -35,7 +35,7 @@
                                                                                              |UIUserNotificationTypeSound)
                                                                                  categories:nil];
         [application registerUserNotificationSettings:settings];
-    } 
+    }
 
     return YES;
 }
