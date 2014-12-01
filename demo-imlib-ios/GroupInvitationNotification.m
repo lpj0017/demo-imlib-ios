@@ -42,11 +42,14 @@
     }
 }
 
-+(instancetype)groupInvitationNotificationWith:(NSString *)groupId message:(NSString *)message
++(instancetype)groupInvitationNotificationWith:(NSString *)groupId
+                                       message:(NSString *)message
+                                         extra:(NSString *) extra
 {
     GroupInvitationNotification *noti = [[GroupInvitationNotification alloc] init];
     noti.groupId = groupId;
     noti.message = message;
+    noti.extra =  extra;
     
     return noti;
 }

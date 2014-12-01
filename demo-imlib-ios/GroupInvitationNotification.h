@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import "RCNotificationMessage.h"
-#import "imlib/Headers/iOS_IMLib/RCNotificationMessage.h"
+#import "RCNotificationMessage.h"
+
 
 
 @interface GroupInvitationNotification : RCNotificationMessage
@@ -16,9 +16,10 @@
 
 @property (nonatomic,copy) NSString *groupId;
 @property (nonatomic,copy) NSString *message;
+@property (nonatomic,copy) NSString *extra;
 
-+(instancetype) groupInvitationNotificationWith:(NSString *) groupId
-                                       message :(NSString *) message;
-
++(instancetype)groupInvitationNotificationWith:(NSString *)groupId
+                                       message:(NSString *)message
+                                         extra:(NSString *) extra;
 + (NSString *)getObjectName;
 @end

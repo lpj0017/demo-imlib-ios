@@ -34,6 +34,20 @@
                ReferencedContainer = "container:demo-imlib-ios.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B262AB7919271838002F1707"
+               BuildableName = "libiOS_IMLib.a"
+               BlueprintName = "iOS_IMLib"
+               ReferencedContainer = "container:../../IOS-Develop/ios/ios-imlib/iOS-IMLib.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

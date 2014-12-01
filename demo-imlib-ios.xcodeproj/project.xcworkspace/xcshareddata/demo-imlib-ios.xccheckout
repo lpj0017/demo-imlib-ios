@@ -10,26 +10,30 @@
 	<string>demo-imlib-ios</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>01F6B715545BB809EC6EEDD4C7991585B6EA98B6</key>
+		<string>github.com:rongcloud/demo-imlib-ios.git</string>
 		<key>7AF2CC6D17829D9B9E0044C5E81E9275A86C81AE</key>
 		<string>gitlab.rongcloud.net:ios-team/ios-imlib.git</string>
 		<key>EC6101A5C703A361D44F8896D8E5F17ED249C962</key>
 		<string>https://github.com/rongcloud/demo-imlib-ios</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>demo-imlib-ios/demo-imlib-ios.xcodeproj</string>
+	<string>demo-imlib-ios.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>01F6B715545BB809EC6EEDD4C7991585B6EA98B6</key>
+		<string>../..</string>
 		<key>7AF2CC6D17829D9B9E0044C5E81E9275A86C81AE</key>
-		<string>../../../../IOS-Develop/ios/ios-imlib</string>
+		<string>../../../IOS-Develop/ios/ios-imlib</string>
 		<key>EC6101A5C703A361D44F8896D8E5F17ED249C962</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/rongcloud/demo-imlib-ios</string>
+	<string>github.com:rongcloud/demo-imlib-ios.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>EC6101A5C703A361D44F8896D8E5F17ED249C962</string>
+	<string>01F6B715545BB809EC6EEDD4C7991585B6EA98B6</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -37,6 +41,14 @@
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>EC6101A5C703A361D44F8896D8E5F17ED249C962</string>
+			<key>IDESourceControlWCCName</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>01F6B715545BB809EC6EEDD4C7991585B6EA98B6</string>
 			<key>IDESourceControlWCCName</key>
 			<string>demo-imlib-ios</string>
 		</dict>

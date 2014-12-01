@@ -16,16 +16,10 @@
 #import "GroupInvitationNotification.h"
 #import <AVFoundation/AVFoundation.h>
 #import "RCRichContentMessage.h"
+#import "RCProfileNotificationMessage.h"
+#import "RCCommandNotificationMessage.h"
+#import "RCContactNotificationMessage.h"
 
-//#import "imlib/Headers/iOS_IMLib/RCMessage.h"
-//#import "imlib/Headers/iOS_IMLib/RCImageMessage.h"
-//#import "imlib/Headers/iOS_IMLib/RCTextMessage.h"
-//#import "imlib/Headers/iOS_IMLib/RCVoiceMessage.h"
-//#import "imlib/Headers/iOS_IMLib/RCIMClient.h"
-//#import "imlib/Headers/iOS_IMLib/RCStatusDefine.h"
-//#import "GroupInvitationNotification.h"
-
-#import <AVFoundation/AVFoundation.h>
 #define TOKEN1 @"XdW7qHkF9wvKQCKzYH3nDgYqCABAn5Kcb8fca4eQhGaaWjGCFu7YYIDYzu5h5C30NeC3UICWSuu2y7b5u85R1Q=="
 #define TOKEN2 @"hXfg1mnRds2ggVjzc6T0lVlsz7j8LIjffmzv+eY1iPJrmFN0Tr/J9rEORb67D46vclg18qm7AmrUOlYinP0c4A=="
 
@@ -123,9 +117,8 @@
 
 //发送自定义消息
 - (IBAction)sentCustomMessage:(id)sender {
-    GroupInvitationNotification *message = [GroupInvitationNotification groupInvitationNotificationWith:@"1101" message:@"test"];
-    [message setExtra:@"(extra_text 扩展字段)"];
-    [message setPushMessage:@"push 字段"];
+    GroupInvitationNotification *message = [GroupInvitationNotification groupInvitationNotificationWith:@"1101" message:@"test" extra:@"(extra_text 扩展字段)"];
+    [message setPushContent:@"push 字段"];
     [RCIMClient registerMessageType:[GroupInvitationNotification class]];
     [[RCIMClient sharedRCIMClient] sendMessage:ConversationType_PRIVATE
                                       targetId:self.userId
@@ -137,6 +130,32 @@
    
     
 }
+
+//好友操作消息
+- (IBAction)actFriendMsg:(id)sender {
+    RCContactNotificationMessage *contactNotiMsg = [RCContactNotificationMessage  notificationWithOperation:@"好友操作" sourceUserId:@"源id" targetUserId:@"目标id" message:@"添加好友" extra:@"扩展字段"];
+    [[RCIMClient sharedRCIMClient] sendMessage:ConversationType_PRIVATE targetId:self.userId content:contactNotiMsg delegate:self object:nil];
+    
+    
+}
+
+//资料变更消息
+- (IBAction)actInfoMsg:(id)sender {
+    
+    RCProfileNotificationMessage *proNotiMsg = [RCProfileNotificationMessage notificationWithOperation:@"资料变更" data:@"{name:'tt124'}" extra:@"extra扩展字段"];
+    [[RCIMClient sharedRCIMClient] sendMessage:ConversationType_PRIVATE targetId:self.userId content:proNotiMsg delegate:self object:nil];
+    
+}
+
+//命令通知消息
+- (IBAction)actCommandMsg:(id)sender {
+    RCCommandNotificationMessage *commanNotiMsg = [RCCommandNotificationMessage notificationWithName:@"命令消息" data:@"命令消息数据"];
+    [[RCIMClient sharedRCIMClient] sendMessage:ConversationType_PRIVATE targetId:self.userId content:commanNotiMsg delegate:self object:nil];
+    
+}
+
+
+
 - (IBAction)reConnect:(id)sender {
     [[RCIMClient sharedRCIMClient] disconnect];
     //连接融云服务器，用自己注册融云API调试下获取的Token
@@ -160,6 +179,7 @@
 
     
 }
+
 -(void)publishLocalNotification:(NSString *)message {
     //设置1秒之后
     
@@ -223,8 +243,6 @@
     if ([message.content isKindOfClass:[GroupInvitationNotification class]]) {
         GroupInvitationNotification *notti = (GroupInvitationNotification *) message.content;
         NSLog(@"======>>>> 自定消息内容 %@ %@ <<<===>>> 扩展字段 %@",notti.groupId,notti.message,notti.extra);
-        
-        //[self publishLocalNotification:notti.pushMessage];
         mmm = @"GroupInvitationNotification";
     }
 
@@ -245,6 +263,21 @@
         NSLog(@"=======>>>>>> 图文消息 %@ <<<===>>> 扩展字段 %@",msg,msg.extra);
         mmm = @"RCRichContentMessage";
     }
+    
+    if ([message.content isKindOfClass:[RCProfileNotificationMessage class]]) {
+        RCProfileNotificationMessage *msg = (RCProfileNotificationMessage *) message.content;
+        NSLog(@"====>>>>> 资料变更消息：%@ <<<===>>>%@ %@ %@",msg,msg.extra,msg.data,msg.operation);
+    }
+    if ([message.content isKindOfClass:[RCCommandNotificationMessage class]]) {
+        RCCommandNotificationMessage *msg = (RCCommandNotificationMessage *) message.content;
+        NSLog(@"====>>>>> 命令操作消息：%@ <<<===>>> %@ %@",msg,msg.name ,msg.data);
+    }
+    
+    if ([message.content isKindOfClass:[RCContactNotificationMessage class]]) {
+        RCContactNotificationMessage *msg = (RCContactNotificationMessage *) message.content;
+        NSLog(@"====>>>>> 好友添加消息：%@ <<<===>>> %@ %@ %@ %@ %@ ",msg,msg.operation,msg.sourceUserId,msg.targetUserId,msg.message,msg.extra);
+    }
+
     [self publishLocalNotification:mmm];
     
 }

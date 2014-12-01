@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E4201A781A23783A0023CE03 /* iOS_IMLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4201A771A23783A0023CE03 /* iOS_IMLib.a */; };
 		E4BF473C1A0B403200C88FEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E4BF473B1A0B403200C88FEA /* main.m */; };
 		E4BF473F1A0B403200C88FEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E4BF473E1A0B403200C88FEA /* AppDelegate.m */; };
 		E4BF47421A0B403200C88FEA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E4BF47411A0B403200C88FEA /* ViewController.m */; };
@@ -35,6 +34,7 @@
 		E4BF479F1A0B80B800C88FEA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4BF479E1A0B80B800C88FEA /* UIKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		E4BF47A11A0B840200C88FEA /* test.png in Resources */ = {isa = PBXBuildFile; fileRef = E4BF47A01A0B840200C88FEA /* test.png */; };
 		E4C331431A0CD65C00E31B9A /* GroupInvitationNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C331421A0CD65C00E31B9A /* GroupInvitationNotification.m */; };
+		E4E11E311A2C62210080E633 /* iOS_IMLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4E11E2F1A2C61CD0080E633 /* iOS_IMLib.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,24 +48,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E4201A661A23783A0023CE03 /* RCClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCClientDelegate.h; sourceTree = "<group>"; };
-		E4201A671A23783A0023CE03 /* RCConversation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCConversation.h; sourceTree = "<group>"; };
-		E4201A681A23783A0023CE03 /* RCDiscussion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCDiscussion.h; sourceTree = "<group>"; };
-		E4201A691A23783A0023CE03 /* RCDiscussionNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCDiscussionNotification.h; sourceTree = "<group>"; };
-		E4201A6A1A23783A0023CE03 /* RCGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCGroup.h; sourceTree = "<group>"; };
-		E4201A6B1A23783A0023CE03 /* RCImageMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCImageMessage.h; sourceTree = "<group>"; };
-		E4201A6C1A23783A0023CE03 /* RCIMClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCIMClient.h; sourceTree = "<group>"; };
-		E4201A6D1A23783A0023CE03 /* RCIMClientHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCIMClientHeader.h; sourceTree = "<group>"; };
-		E4201A6E1A23783A0023CE03 /* RCLocationMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCLocationMessage.h; sourceTree = "<group>"; };
-		E4201A6F1A23783A0023CE03 /* RCMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCMessage.h; sourceTree = "<group>"; };
-		E4201A701A23783A0023CE03 /* RCMessageContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCMessageContent.h; sourceTree = "<group>"; };
-		E4201A711A23783A0023CE03 /* RCNotificationMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCNotificationMessage.h; sourceTree = "<group>"; };
-		E4201A721A23783A0023CE03 /* RCRichContentMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCRichContentMessage.h; sourceTree = "<group>"; };
-		E4201A731A23783A0023CE03 /* RCStatusDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCStatusDefine.h; sourceTree = "<group>"; };
-		E4201A741A23783A0023CE03 /* RCTextMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTextMessage.h; sourceTree = "<group>"; };
-		E4201A751A23783A0023CE03 /* RCUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCUserInfo.h; sourceTree = "<group>"; };
-		E4201A761A23783A0023CE03 /* RCVoiceMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCVoiceMessage.h; sourceTree = "<group>"; };
-		E4201A771A23783A0023CE03 /* iOS_IMLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = iOS_IMLib.a; sourceTree = "<group>"; };
 		E4BF47361A0B403200C88FEA /* demo-imlib-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "demo-imlib-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4BF473A1A0B403200C88FEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4BF473B1A0B403200C88FEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -100,6 +82,28 @@
 		E4BF47A01A0B840200C88FEA /* test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.png; sourceTree = "<group>"; };
 		E4C331411A0CD65C00E31B9A /* GroupInvitationNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupInvitationNotification.h; sourceTree = "<group>"; };
 		E4C331421A0CD65C00E31B9A /* GroupInvitationNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupInvitationNotification.m; sourceTree = "<group>"; };
+		E4E11E1A1A2C61CD0080E633 /* RCClientDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCClientDelegate.h; sourceTree = "<group>"; };
+		E4E11E1B1A2C61CD0080E633 /* RCCommandNotificationMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCommandNotificationMessage.h; sourceTree = "<group>"; };
+		E4E11E1C1A2C61CD0080E633 /* RCContactNotificationMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCContactNotificationMessage.h; sourceTree = "<group>"; };
+		E4E11E1D1A2C61CD0080E633 /* RCConversation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCConversation.h; sourceTree = "<group>"; };
+		E4E11E1E1A2C61CD0080E633 /* RCDiscussion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCDiscussion.h; sourceTree = "<group>"; };
+		E4E11E1F1A2C61CD0080E633 /* RCDiscussionNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCDiscussionNotification.h; sourceTree = "<group>"; };
+		E4E11E201A2C61CD0080E633 /* RCGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCGroup.h; sourceTree = "<group>"; };
+		E4E11E211A2C61CD0080E633 /* RCGroupNotificationMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCGroupNotificationMessage.h; sourceTree = "<group>"; };
+		E4E11E221A2C61CD0080E633 /* RCImageMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCImageMessage.h; sourceTree = "<group>"; };
+		E4E11E231A2C61CD0080E633 /* RCIMClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCIMClient.h; sourceTree = "<group>"; };
+		E4E11E241A2C61CD0080E633 /* RCIMClientHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCIMClientHeader.h; sourceTree = "<group>"; };
+		E4E11E251A2C61CD0080E633 /* RCLocationMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCLocationMessage.h; sourceTree = "<group>"; };
+		E4E11E261A2C61CD0080E633 /* RCMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCMessage.h; sourceTree = "<group>"; };
+		E4E11E271A2C61CD0080E633 /* RCMessageContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCMessageContent.h; sourceTree = "<group>"; };
+		E4E11E281A2C61CD0080E633 /* RCNotificationMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCNotificationMessage.h; sourceTree = "<group>"; };
+		E4E11E291A2C61CD0080E633 /* RCProfileNotificationMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCProfileNotificationMessage.h; sourceTree = "<group>"; };
+		E4E11E2A1A2C61CD0080E633 /* RCRichContentMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCRichContentMessage.h; sourceTree = "<group>"; };
+		E4E11E2B1A2C61CD0080E633 /* RCStatusDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCStatusDefine.h; sourceTree = "<group>"; };
+		E4E11E2C1A2C61CD0080E633 /* RCTextMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTextMessage.h; sourceTree = "<group>"; };
+		E4E11E2D1A2C61CD0080E633 /* RCUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCUserInfo.h; sourceTree = "<group>"; };
+		E4E11E2E1A2C61CD0080E633 /* RCVoiceMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCVoiceMessage.h; sourceTree = "<group>"; };
+		E4E11E2F1A2C61CD0080E633 /* iOS_IMLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = iOS_IMLib.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4E11E311A2C62210080E633 /* iOS_IMLib.a in Frameworks */,
 				E4BF479F1A0B80B800C88FEA /* UIKit.framework in Frameworks */,
 				E4BF479D1A0B80B100C88FEA /* SystemConfiguration.framework in Frameworks */,
 				E4BF479B1A0B80A700C88FEA /* QuartzCore.framework in Frameworks */,
@@ -120,7 +125,6 @@
 				E4BF478B1A0B805A00C88FEA /* CoreMedia.framework in Frameworks */,
 				E4BF47891A0B805100C88FEA /* CoreImage.framework in Frameworks */,
 				E4BF47871A0B804700C88FEA /* CoreAudio.framework in Frameworks */,
-				E4201A781A23783A0023CE03 /* iOS_IMLib.a in Frameworks */,
 				E4BF47851A0B803C00C88FEA /* CoreTelephony.framework in Frameworks */,
 				E4BF47831A0B803400C88FEA /* CoreGraphics.framework in Frameworks */,
 				E4BF47811A0B802D00C88FEA /* CFNetwork.framework in Frameworks */,
@@ -139,47 +143,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E4201A631A23783A0023CE03 /* imlib */ = {
-			isa = PBXGroup;
-			children = (
-				E4201A641A23783A0023CE03 /* Headers */,
-				E4201A771A23783A0023CE03 /* iOS_IMLib.a */,
-			);
-			path = imlib;
-			sourceTree = "<group>";
-		};
-		E4201A641A23783A0023CE03 /* Headers */ = {
-			isa = PBXGroup;
-			children = (
-				E4201A651A23783A0023CE03 /* iOS_IMLib */,
-			);
-			path = Headers;
-			sourceTree = "<group>";
-		};
-		E4201A651A23783A0023CE03 /* iOS_IMLib */ = {
-			isa = PBXGroup;
-			children = (
-				E4201A661A23783A0023CE03 /* RCClientDelegate.h */,
-				E4201A671A23783A0023CE03 /* RCConversation.h */,
-				E4201A681A23783A0023CE03 /* RCDiscussion.h */,
-				E4201A691A23783A0023CE03 /* RCDiscussionNotification.h */,
-				E4201A6A1A23783A0023CE03 /* RCGroup.h */,
-				E4201A6B1A23783A0023CE03 /* RCImageMessage.h */,
-				E4201A6C1A23783A0023CE03 /* RCIMClient.h */,
-				E4201A6D1A23783A0023CE03 /* RCIMClientHeader.h */,
-				E4201A6E1A23783A0023CE03 /* RCLocationMessage.h */,
-				E4201A6F1A23783A0023CE03 /* RCMessage.h */,
-				E4201A701A23783A0023CE03 /* RCMessageContent.h */,
-				E4201A711A23783A0023CE03 /* RCNotificationMessage.h */,
-				E4201A721A23783A0023CE03 /* RCRichContentMessage.h */,
-				E4201A731A23783A0023CE03 /* RCStatusDefine.h */,
-				E4201A741A23783A0023CE03 /* RCTextMessage.h */,
-				E4201A751A23783A0023CE03 /* RCUserInfo.h */,
-				E4201A761A23783A0023CE03 /* RCVoiceMessage.h */,
-			);
-			path = iOS_IMLib;
-			sourceTree = "<group>";
-		};
 		E4BF472D1A0B403200C88FEA = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +183,7 @@
 		E4BF47391A0B403200C88FEA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E4BF47A01A0B840200C88FEA /* test.png */,
 				E4BF473A1A0B403200C88FEA /* Info.plist */,
 				E4BF473B1A0B403200C88FEA /* main.m */,
 			);
@@ -246,8 +210,7 @@
 		E4BF475F1A0B404900C88FEA /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				E4201A631A23783A0023CE03 /* imlib */,
-				E4BF47A01A0B840200C88FEA /* test.png */,
+				E4E11E171A2C61CD0080E633 /* imlib */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -276,6 +239,51 @@
 			);
 			name = Frameworks;
 			path = "demo-imlib-ios";
+			sourceTree = "<group>";
+		};
+		E4E11E171A2C61CD0080E633 /* imlib */ = {
+			isa = PBXGroup;
+			children = (
+				E4E11E181A2C61CD0080E633 /* Headers */,
+				E4E11E2F1A2C61CD0080E633 /* iOS_IMLib.a */,
+			);
+			path = imlib;
+			sourceTree = "<group>";
+		};
+		E4E11E181A2C61CD0080E633 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				E4E11E191A2C61CD0080E633 /* iOS_IMLib */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		E4E11E191A2C61CD0080E633 /* iOS_IMLib */ = {
+			isa = PBXGroup;
+			children = (
+				E4E11E1A1A2C61CD0080E633 /* RCClientDelegate.h */,
+				E4E11E1B1A2C61CD0080E633 /* RCCommandNotificationMessage.h */,
+				E4E11E1C1A2C61CD0080E633 /* RCContactNotificationMessage.h */,
+				E4E11E1D1A2C61CD0080E633 /* RCConversation.h */,
+				E4E11E1E1A2C61CD0080E633 /* RCDiscussion.h */,
+				E4E11E1F1A2C61CD0080E633 /* RCDiscussionNotification.h */,
+				E4E11E201A2C61CD0080E633 /* RCGroup.h */,
+				E4E11E211A2C61CD0080E633 /* RCGroupNotificationMessage.h */,
+				E4E11E221A2C61CD0080E633 /* RCImageMessage.h */,
+				E4E11E231A2C61CD0080E633 /* RCIMClient.h */,
+				E4E11E241A2C61CD0080E633 /* RCIMClientHeader.h */,
+				E4E11E251A2C61CD0080E633 /* RCLocationMessage.h */,
+				E4E11E261A2C61CD0080E633 /* RCMessage.h */,
+				E4E11E271A2C61CD0080E633 /* RCMessageContent.h */,
+				E4E11E281A2C61CD0080E633 /* RCNotificationMessage.h */,
+				E4E11E291A2C61CD0080E633 /* RCProfileNotificationMessage.h */,
+				E4E11E2A1A2C61CD0080E633 /* RCRichContentMessage.h */,
+				E4E11E2B1A2C61CD0080E633 /* RCStatusDefine.h */,
+				E4E11E2C1A2C61CD0080E633 /* RCTextMessage.h */,
+				E4E11E2D1A2C61CD0080E633 /* RCUserInfo.h */,
+				E4E11E2E1A2C61CD0080E633 /* RCVoiceMessage.h */,
+			);
+			path = iOS_IMLib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
